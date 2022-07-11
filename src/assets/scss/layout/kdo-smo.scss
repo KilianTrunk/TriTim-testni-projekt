@@ -1,0 +1,44 @@
+/* ---------- variables ---------- */
+
+$white: #FFFFFF;
+
+/* ---------- classes ---------- */
+
+.kdo-smo {
+    height: 100vh;
+    padding: 150px 0 100px 0;
+}
+
+.kdo-smo-img {
+    height: 90%;
+}
+
+.kdo-smo-main-txt {
+    font-size: 72px;
+    padding-top: 36px;
+}
+
+.kdo-smo-secondary-txt {
+    font-size: 16px;
+    padding-bottom: 24px;
+}
+
+.kdo-smo-secondary-txt-container {
+    padding-top: 90px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .kdo-smo-img {
+        display: none;
+    }
+    .kdo-smo {
+        height: auto;
+        padding: 38px 0 60px 0;
+    }
+    .kdo-smo-main-txt {
+        font-size: 28px;
+    }
+    .kdo-smo-secondary-txt-container {
+        padding-top: 40px;
+    }
+}

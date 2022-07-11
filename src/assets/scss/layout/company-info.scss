@@ -1,0 +1,35 @@
+/* ---------- classes ---------- */
+
+.company-info {
+    padding: 150px 0;
+}
+
+.company-info-txt-padding-top {
+    padding-top: 30px;
+}
+
+.company-info-main-txt {
+    font-size: 72px;
+    padding-bottom: 30px;
+}
+
+.company-info-secondary-txt {
+    font-size: 36px;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .company-info {
+        padding: 50px 0;
+    }
+    .company-info-txt-padding-top {
+        padding-top: 30px;
+    }
+    .company-info-main-txt {
+        font-size: 28px;
+    }
+    .company-info-secondary-txt {
+        font-size: 16px;
+        padding-top: 4px;
+    }
+}

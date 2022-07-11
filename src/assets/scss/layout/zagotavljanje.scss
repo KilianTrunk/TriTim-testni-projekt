@@ -1,0 +1,49 @@
+/* ---------- variables ---------- */
+
+$white: #FFFFFF;
+$dark-blue: #002333;
+;
+
+/* ---------- classes ---------- */
+
+.zagotavljanje {
+    background-image: url("../../../assets/img/zagotavljanje-img.png");
+    height: 800px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.zagotavljanje-txt {
+    color: $white;
+    font-size: 72px;
+    line-height: 80px;
+    margin-top: 250px;
+    transition: 0.04s;
+}
+
+.zagotavljanje-btn {
+    border-radius: 30px;
+    border: 1px solid $white;
+    color: $white;
+    padding: 10px 34px;
+    font-size: 18px;
+    background-color: transparent;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.zagotavljanje-btn:hover {
+    color: $dark-blue;
+    border-color: $dark-blue;
+    background-color: $white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .zagotavljanje-txt {
+        font-size: 28px;
+        line-height: 30px;
+        margin-top: 140px;
+    }
+}

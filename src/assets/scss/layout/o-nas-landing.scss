@@ -1,0 +1,40 @@
+/* ---------- variables ---------- */
+
+$white: #ffffff;
+
+/* ---------- classes ---------- */
+
+.o-nas-landing {
+    background-image: url("../../../assets/img/o-nas-landing-img.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 80%;
+    height: 100vh;
+    padding-top: 400px;
+}
+
+.o-nas-landing-txt {
+    font-size: 72px;
+    color: $white;
+    line-height: 70px;
+}
+
+.o-nas-landing-eu-img {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .o-nas-landing-eu-img {
+        display: none;
+    }
+    .o-nas-landing-txt {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .o-nas-landing {
+        background-position: 60% 170%;
+        padding-top: 360px;
+    }
+}

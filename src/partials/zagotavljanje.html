@@ -1,0 +1,66 @@
+<div class="zagotavljanje">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-9 offset-1 col-lg-5">
+                <div class="zagotavljanje-txt">
+                    Zagotavljamo varen, zanesljiv in hiter prevoz blaga.
+                </div>
+                <button type="button" class="zagotavljanje-btn">Več</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_zagotavljanje = ".partnerji";
+    $target_section_txt_class_zagotavljanje = ".zagotavljanje-txt";
+
+    $(function() {
+        var prevScroll_zagotavljanje = $(document).scrollTop();
+        $storage_zagotavljanje = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_zagotavljanje = $($next_section_class_zagotavljanje).offset().top;
+                var bottom_of_element_zagotavljanje =
+                    $($next_section_class_zagotavljanje).offset().top +
+                    $($next_section_class_zagotavljanje).outerHeight();
+                var bottom_of_screen_zagotavljanje = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_zagotavljanje = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_zagotavljanje > top_of_element_zagotavljanje &&
+                    top_of_screen_zagotavljanje < bottom_of_element_zagotavljanje
+                ) {
+                    var newScroll_zagotavljanje = $(document).scrollTop();
+                    if (newScroll_zagotavljanje < prevScroll_zagotavljanje) {
+                        // Scrolled up
+                        $storage_zagotavljanje = $storage_zagotavljanje - 20;
+                        console.log($storage_zagotavljanje);
+                        $($target_section_txt_class_zagotavljanje).css({
+                            transform: "translateY(" + $storage_zagotavljanje + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_zagotavljanje = $storage_zagotavljanje + 20;
+                        console.log($storage_zagotavljanje);
+                        $($target_section_txt_class_zagotavljanje).css({
+                            transform: "translateY(" + $storage_zagotavljanje + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_zagotavljanje).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_zagotavljanje = 0;
+                }
+                prevScroll_zagotavljanje = newScroll_zagotavljanje;
+            });
+        }
+    });
+</script>

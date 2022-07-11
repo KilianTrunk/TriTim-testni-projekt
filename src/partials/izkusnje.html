@@ -1,0 +1,66 @@
+<div class="izkusnje">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 offset-1 col-lg-5 offset-lg-1">
+                <div class="izkusnje-txt">
+                    Več kot 30 let izkušenj na področju transporta.
+                </div>
+            </div>
+        </div>
+        <img src="../assets/img/eu-img.png" alt="eu-img" class="izkusnje-eu-img" />
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_izkusnje = ".o-nas";
+    $target_section_txt_class_izkusnje = ".izkusnje-txt";
+
+    $(function() {
+        var prevScroll_izkusnje = $(document).scrollTop();
+        $storage_izkusnje = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_izkusnje = $($next_section_class_izkusnje).offset().top;
+                var bottom_of_element_izkusnje =
+                    $($next_section_class_izkusnje).offset().top +
+                    $($next_section_class_izkusnje).outerHeight();
+                var bottom_of_screen_izkusnje = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_izkusnje = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_izkusnje > top_of_element_izkusnje &&
+                    top_of_screen_izkusnje < bottom_of_element_izkusnje
+                ) {
+                    var newScroll_izkusnje = $(document).scrollTop();
+                    if (newScroll_izkusnje < prevScroll_izkusnje) {
+                        // Scrolled up
+                        $storage_izkusnje = $storage_izkusnje - 20;
+                        console.log($storage_izkusnje);
+                        $($target_section_txt_class_izkusnje).css({
+                            transform: "translateY(" + $storage_izkusnje + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_izkusnje = $storage_izkusnje + 20;
+                        console.log($storage_izkusnje);
+                        $($target_section_txt_class_izkusnje).css({
+                            transform: "translateY(" + $storage_izkusnje + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_izkusnje).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_izkusnje = 0;
+                }
+                prevScroll_izkusnje = newScroll_izkusnje;
+            });
+        }
+    });
+</script>

@@ -1,0 +1,77 @@
+<div class="mednarodni-transport">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 col-lg-3 offset-lg-1">
+                <div class="mednarodni-transport-main-txt mednarodni-transport-txt">Mednarodni transport.</div>
+            </div>
+            <div class="col-6 col-lg-3 offset-lg-4">
+                <div class="mednarodni-transport-secondary-txt-container">
+                    <ul>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Avstrija</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Poljska</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Češka</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Slovaška</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Madžarska</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Hrvaška</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Srbija</li>
+                        <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Nemčija</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_mednarodni_transport = ".kontaktni-obrazec";
+    $target_section_txt_class_mednarodni_transport = ".mednarodni-transport-txt";
+
+    $(function() {
+        var prevScroll_mednarodni_transport = $(document).scrollTop();
+        $storage_mednarodni_transport = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_mednarodni_transport = $($next_section_class_mednarodni_transport).offset().top;
+                var bottom_of_element_mednarodni_transport =
+                    $($next_section_class_mednarodni_transport).offset().top +
+                    $($next_section_class_mednarodni_transport).outerHeight();
+                var bottom_of_screen_mednarodni_transport = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_mednarodni_transport = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_mednarodni_transport > top_of_element_mednarodni_transport &&
+                    top_of_screen_mednarodni_transport < bottom_of_element_mednarodni_transport
+                ) {
+                    var newScroll_mednarodni_transport = $(document).scrollTop();
+                    if (newScroll_mednarodni_transport < prevScroll_mednarodni_transport) {
+                        // Scrolled up
+                        $storage_mednarodni_transport = $storage_mednarodni_transport - 20;
+                        console.log($storage_mednarodni_transport);
+                        $($target_section_txt_class_mednarodni_transport).css({
+                            transform: "translateY(" + $storage_mednarodni_transport + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_mednarodni_transport = $storage_mednarodni_transport + 20;
+                        console.log($storage_mednarodni_transport);
+                        $($target_section_txt_class_mednarodni_transport).css({
+                            transform: "translateY(" + $storage_mednarodni_transport + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_mednarodni_transport).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_mednarodni_transport = 0;
+                }
+                prevScroll_mednarodni_transport = newScroll_mednarodni_transport;
+            });
+        }
+    });
+</script>

@@ -1,0 +1,32 @@
+/* ---------- variables ---------- */
+
+$white: #FFFFFF;
+
+/* ---------- classes ---------- */
+
+.življenje {
+    background-image: url("../../../assets/img/življenje-img.png");
+    height: 800px;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.življenje-txt {
+    color: $white;
+    font-size: 72px;
+    line-height: 80px;
+    margin-top: 250px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .življenje-txt {
+        font-size: 28px;
+        line-height: 30px;
+        margin-top: 140px;
+    }
+    .življenje {
+        background-position: 30% 50%;
+    }
+}

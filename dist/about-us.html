@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <title>O nas</title>
+
+    <!-- Favicon -->
+    <link rel=" icon" type="image/ico" href="./assets/img/favicon/favicon.svg" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link href="./assets/css/main.min.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="container-fluid p-0 navigacija">
+            <div class="row">
+                <div class="col-3 offset-1 col-lg-1 offset-lg-1">
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" />
+                            <img src="../assets/img/logo-black.png" alt="logo-img" id="navbar-logo-black" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10 offset-2 col-lg-9 offset-lg-0">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu">
+                                <ul class="navbar-ul">
+                                    <li>
+                                        <a href="about-us.html" class="navbar-txt-item">O NAS</a>
+                                    </li>
+                                    <li><a href="#" class="navbar-txt-item">TRANSPORT</a></li>
+                                    <li>
+                                        <a href="#" class="navbar-txt-item">POSLOVNO SVETOVANJE</a>
+                                    </li>
+                                    <li><a href="#" class="navbar-txt-item">TRGOVINA</a></li>
+                                    <li>
+                                        <a href="#" class="navbar-txt-item" id="navbar-slo-item">SLO <i class="fa-solid fa-angle-down"></i
+                      ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-solid fa-bars"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-9 offset-2 col-lg-12 offset-lg-0">
+                            <div class="navbar-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="index.html">
+                                    <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" class="sidenav-logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">O NAS</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">TRANSPORT</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">POSLOVNO SVETOVANJE</a
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <a href="about-us.html" class="sidebar-txt">TRGOVINA</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">SOFINANCIRANJE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-2">
+                        <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-x"></i
+              ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Navbar Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $(".navigacija").addClass("black");
+                $("#navbar-logo-white").hide();
+                $("#navbar-logo-black").show();
+            } else {
+                $(".navigacija").removeClass("black");
+                $("#navbar-logo-white").show();
+                $("#navbar-logo-black").hide();
+            }
+        });
+
+        $(".fa-bars").click(function() {
+            $openNav();
+        });
+
+        $(".closebtn").click(function() {
+            $closeNav();
+        });
+
+        $openNav = function() {
+            $("#mySidenav").css({
+                width: "100%",
+            });
+        };
+
+        $closeNav = function() {
+            $("#mySidenav").css({
+                width: "0",
+            });
+        };
+    </script> <div class="o-nas-landing">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 offset-1 col-lg-5 offset-lg-1">
+                <div class="o-nas-landing-txt">
+                    O nas
+                </div>
+            </div>
+        </div>
+        <img src="../assets/img/eu-img.png" alt="eu-img" class="o-nas-landing-eu-img">
+    </div>
+</div> <div class="kdo-smo">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1">
+                <img src="../assets/img/kdo-smo-img.png" alt="kdo-smo-img" class="kdo-smo-img" />
+            </div>
+            <div class="offset-1 col-lg-5 offset-lg-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="kdo-smo-main-txt">Kdo smo?</div>
+                    </div>
+                </div>
+                <div class="kdo-smo-secondary-txt-container">
+                    <div class="row">
+                        <div class="col-10 col-lg-7">
+                            <div class="kdo-smo-secondary-txt">
+                                TLS, logistika, skladiščenje in transport, d.o.o. smo podjetje, kjer skupaj s sodelavci in zaupanja vrednimi partnerji zadnjih 30 let gradimo, razvijamo in ustvarjamo na področju mednarodnega transporta. Specializirani smo za prevoz volumenskega blaga
+                                z vozili z nosilnostjo od 7.500 kg do 24.000 kg in prostornine do 120 m3.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 col-lg-8">
+                            <div class="kdo-smo-secondary-txt">
+                                Ukvarjamo se s prevozi po Evropi, predvsem v države AT, SK, PL, CZ, HU, HR, SRB, RO, DE.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 col-lg-8">
+                            <div class="kdo-smo-secondary-txt">
+                                Naše poslanstvo je strankam zagotavljati varen, zanesljiv in hiter prevoz blaga.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <div class="vrednote">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 col-lg-3 offset-lg-1">
+                <div class="vrednote-main-txt">Naše vrednote</div>
+            </div>
+            <div class="col-6 col-lg-3 offset-lg-4">
+                <div class="vrednote-secondary-txt-container">
+                    <ul>
+                        <li class="vrednote-secondary-txt">Zanesljivost</li>
+                        <li class="vrednote-secondary-txt">Prilagodljivost</li>
+                        <li class="vrednote-secondary-txt">Hitrost</li>
+                        <li class="vrednote-secondary-txt">Organiziranost</li>
+                        <li class="vrednote-secondary-txt">Urejenost</li>
+                        <li class="vrednote-secondary-txt">Premišljenost</li>
+                        <li class="vrednote-secondary-txt">Umirjenost</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <div class="company-info">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-8 offset-1">
+                <div class="company-info-main-txt">
+                    TLS, d.o.o.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-1">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="company-info-secondary-txt company-info-txt-padding-top">
+                            Sp. Rečica 6
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="company-info-secondary-txt">
+                            3270 Laško
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-1 col-lg-4">
+                <div class="row company-info-txt-padding-top">
+                    <div class="col-3 company-info-secondary-txt">Telefon:</div>
+                    <div class="col-8 company-info-secondary-txt">+386 3 734 33 26</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 company-info-secondary-txt">Mobitel:</div>
+                    <div class="col-8 company-info-secondary-txt">+386 31 304 000</div>
+                </div>
+                <div class="row company-info-txt-padding-top">
+                    <div class="col-3 company-info-secondary-txt">Email:</div>
+                    <div class="col-9 company-info-secondary-txt">transport@tls-lasko.si</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <div class="življenje">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-10 offset-1 col-lg-5">
+                <div class="življenje-txt">
+                    Življenje je vzrok in posledica naše poti.
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <div class="kontaktni-obrazec">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-11 offset-1">
+                <div class="kontaktni-obrazec-main-txt">Kontaktni obrazec</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-1">
+                <div class="kontaktni-obrazec-secondary-txt">
+                    Če izpolnite obrazec za povpraševanje, vam bomo odgovorili v najkrajšem možnem času.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <form action="javascript:void(0);" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="ime" name="ime" placeholder="Ime" class="kontaktni-obrazec-input" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="priimek" name="priimek" placeholder="Priimek" class="kontaktni-obrazec-input" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="email" name="email" placeholder="E-mail" class="kontaktni-obrazec-input" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="telst" name="telst" placeholder="Telefonska št." class="kontaktni-obrazec-input" />
+                        </div>
+                    </div>
+                    <textarea id="sporocilo" name="sporocilo" placeholder="Vaše sporočilo" class="kontaktni-obrazec-input kontaktni-obrazec-textarea"></textarea>
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-start">
+                            <input type="checkbox" class="css-checkbox kontaktni-obrazec-checkbox" id="pogoj" name="pogoj" checked="checked" />
+                            <label for="pogoj" class="kontaktni-obrazec-pogoj-txt css-label lite-x-gray">S prijavo se strinjate s pogoji poslovanja in politiko
+                zasebnosti.</label
+              >
+            </div>
+          </div>
+          <input type="submit" value="Pošljite" class="kontaktni-obrazec-btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+        <div class="container-fluid p-0">
+            <div class="row footer-main">
+                <div class="col-3 offset-1 col-lg-4 offset-lg-1">
+                    <img src="../assets/img/logo.png" alt="logo-img" class="footer-logo" />
+                </div>
+                <div class="col-6 col-lg-3 offset-lg-0">
+                    <div class="row">
+                        <div class="col-lg">TLS, d.o.o.</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg">Sp. Rečica 6</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg">3270 Laško</div>
+                    </div>
+                </div>
+                <div class="col-7 offset-4 col-lg-3 offset-lg-0">
+                    <div class="row footer-txt-padding-top">
+                        <div class="col-3">Telefon:</div>
+                        <div class="col-8">+386 3 734 33 26</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Mobitel:</div>
+                        <div class="col-8">+386 31 304 000</div>
+                    </div>
+                    <div class="row footer-txt-padding-top footer-email-txt">
+                        <div class="col-3">Email:</div>
+                        <div class="col-8">transport@tls-lasko.si</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-secondary">
+                <div class="col-7 offset-4 col-lg-4 offset-lg-1 footer-txt-padding-top">
+                    Dizajn in izvedba Medias Kreativ, programiranje TriTim
+                </div>
+                <div class="col-8 offset-4 col-lg-3 offset-lg-0 footer-txt-padding-top">Sofinanciranje</div>
+                <div class="col-8 offset-4 col-lg-3 offset-lg-0">
+                    <div class="row">
+                        <div class="col-lg-4 footer-txt-padding-top"><a class="footer-pogoji-poslovanja" href="../pogoji-poslovanja.doc" download>Pogoji poslovanja</a></div>
+                        <div class="col-lg-8 footer-txt-padding-top">Piškotki</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

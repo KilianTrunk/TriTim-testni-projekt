@@ -1,0 +1,60 @@
+/* ---------- classes ---------- */
+
+.partnerji {
+    padding: 150px 0;
+    height: 100vh;
+}
+
+.partnerji-txt {
+    font-size: 72px;
+    line-height: 70px;
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.partnerji-col {
+    text-align: center;
+}
+
+.partnerji-col-ena {
+    padding-top: 40px;
+}
+
+.partnerji-col-tri {
+    padding-top: 30px;
+}
+
+.partnerji-col-stiri {
+    padding-top: 40px;
+}
+
+.partnerji-slider {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .partnerji-col-dva,
+    .partnerji-col-tri,
+    .partnerji-col-stiri {
+        display: none;
+    }
+    .partnerji-txt {
+        font-size: 28px;
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+    .partnerji-img {
+        height: 320px;
+    }
+    .partnerji {
+        padding: 70px 0;
+        height: auto;
+    }
+    .partnerji-col-ena {
+        padding-bottom: 20px;
+    }
+    .partnerji-slider {
+        text-align: center;
+        display: block
+    }
+}

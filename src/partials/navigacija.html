@@ -1,0 +1,136 @@
+<nav>
+    <div class="container-fluid p-0 navigacija">
+        <div class="row">
+            <div class="col-3 offset-1 col-lg-1 offset-lg-1">
+                <div class="navbar-logo">
+                    <a href="index.html">
+                        <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" />
+                        <img src="../assets/img/logo-black.png" alt="logo-img" id="navbar-logo-black" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-10 offset-2 col-lg-9 offset-lg-0">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <div class="menu">
+                            <ul class="navbar-ul">
+                                <li>
+                                    <a href="about-us.html" class="navbar-txt-item">O NAS</a>
+                                </li>
+                                <li><a href="#" class="navbar-txt-item">TRANSPORT</a></li>
+                                <li>
+                                    <a href="#" class="navbar-txt-item">POSLOVNO SVETOVANJE</a>
+                                </li>
+                                <li><a href="#" class="navbar-txt-item">TRGOVINA</a></li>
+                                <li>
+                                    <a href="#" class="navbar-txt-item" id="navbar-slo-item">SLO <i class="fa-solid fa-angle-down"></i
+                  ></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-regular fa-user"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-9 offset-2 col-lg-12 offset-lg-0">
+                        <div class="navbar-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-1">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="index.html">
+                                <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" class="sidenav-logo" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="about-us.html" class="sidebar-txt">O NAS</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="about-us.html" class="sidebar-txt">TRANSPORT</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="about-us.html" class="sidebar-txt">POSLOVNO SVETOVANJE</a
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="about-us.html" class="sidebar-txt">TRGOVINA</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <a href="about-us.html" class="sidebar-txt">SOFINANCIRANJE</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-2">
+                    <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-x"></i
+          ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-icon").on("click", function() {
+            $("nav ul").toggleClass("showing");
+        });
+    });
+
+    // Navbar Scrolling Effect
+
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+            $(".navigacija").addClass("black");
+            $("#navbar-logo-white").hide();
+            $("#navbar-logo-black").show();
+        } else {
+            $(".navigacija").removeClass("black");
+            $("#navbar-logo-white").show();
+            $("#navbar-logo-black").hide();
+        }
+    });
+
+    $(".fa-bars").click(function() {
+        $openNav();
+    });
+
+    $(".closebtn").click(function() {
+        $closeNav();
+    });
+
+    $openNav = function() {
+        $("#mySidenav").css({
+            width: "100%",
+        });
+    };
+
+    $closeNav = function() {
+        $("#mySidenav").css({
+            width: "0",
+        });
+    };
+</script>

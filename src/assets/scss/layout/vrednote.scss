@@ -1,0 +1,59 @@
+/* ---------- variables ---------- */
+
+$white: #FFFFFF;
+
+/* ---------- html elements ---------- */
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* ---------- classes ---------- */
+
+.vrednote {
+    color: $white;
+    background-image: url("../../../assets/img/vrednote-img.png");
+    background-position: 50% 56%;
+    padding: 150px 0;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.vrednote-main-txt {
+    font-size: 72px;
+    line-height: 70px;
+}
+
+.vrednote-secondary-txt {
+    padding: 20px 0;
+    font-size: 40px;
+}
+
+.vrednote-secondary-txt-container {
+    padding-top: 140px;
+}
+
+@media only screen and (max-width: 900px) {
+    .vrednote {
+        padding: 110px 10px;
+    }
+    .vrednote-main-txt {
+        font-size: 28px;
+        padding-left: 22px;
+        line-height: 30px;
+    }
+    .vrednote-secondary-txt {
+        padding: 10px 0;
+        font-size: 20px;
+    }
+    .vrednote-secondary-txt-container {
+        padding-left: 12px;
+        padding-top: 220px;
+    }
+}

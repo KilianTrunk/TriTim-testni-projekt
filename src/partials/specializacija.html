@@ -1,0 +1,66 @@
+<div class="specializacija">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-10 offset-1 col-lg-5 specializacija-section">
+                <div class="specializacija-txt">
+                    Specializirani za prevoz volumenskega blaga.
+                </div>
+                <button type="button" class="specializacija-btn">Več</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_specializacija = ".tovornjaki";
+    $target_section_txt_class_specializacija = ".specializacija-txt";
+
+    $(function() {
+        var prevScroll_specializacija = $(document).scrollTop();
+        $storage_specializacija = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_specializacija = $($next_section_class_specializacija).offset().top;
+                var bottom_of_element_specializacija =
+                    $($next_section_class_specializacija).offset().top +
+                    $($next_section_class_specializacija).outerHeight();
+                var bottom_of_screen_specializacija = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_specializacija = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_specializacija > top_of_element_specializacija &&
+                    top_of_screen_specializacija < bottom_of_element_specializacija
+                ) {
+                    var newScroll_specializacija = $(document).scrollTop();
+                    if (newScroll_specializacija < prevScroll_specializacija) {
+                        // Scrolled up
+                        $storage_specializacija = $storage_specializacija - 20;
+                        console.log($storage_specializacija);
+                        $($target_section_txt_class_specializacija).css({
+                            transform: "translateY(" + $storage_specializacija + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_specializacija = $storage_specializacija + 20;
+                        console.log($storage_specializacija);
+                        $($target_section_txt_class_specializacija).css({
+                            transform: "translateY(" + $storage_specializacija + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_specializacija).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_specializacija = 0;
+                }
+                prevScroll_specializacija = newScroll_specializacija;
+            });
+        }
+    });
+</script>

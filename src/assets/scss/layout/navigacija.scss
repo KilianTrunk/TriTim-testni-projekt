@@ -1,0 +1,159 @@
+/* ---------- variables ---------- */
+
+$white: #ffffff;
+$black: #000000;
+$gray: #5c5c5c;
+$dark-gray: #212121;
+
+/* ---------- html elements ---------- */
+
+button {
+    transition: 0.4s;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+
+/* ---------- ids ---------- */
+
+#navbar-logo-black {
+    display: none;
+    padding-top: 10px;
+}
+
+#navbar-logo-white {
+    padding-top: 40px;
+}
+
+
+/* ---------- classes ---------- */
+
+.navbar-ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: $white;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+}
+
+.navigacija.black {
+    background: $white;
+}
+
+.navigacija.black ul li a {
+    color: $black;
+}
+
+.navigacija.black ul li a:hover {
+    color: $gray;
+}
+
+.navigacija ul li {
+    display: inline-block;
+    padding: 16px 8px 0 8px;
+}
+
+.navigacija ul li a {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigacija ul li a:hover {
+    color: $black;
+}
+
+.navbar-line {
+    width: 100%;
+    border-top: 1px solid $white;
+}
+
+.navbar-logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar-txt-item {
+    margin-right: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $dark-gray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-image: url("../../../assets/img/side-menu-img.png");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.sidenav-logo {
+    padding-bottom: 160px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: $white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: $gray;
+}
+
+.closebtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.sidebar-txt {
+    margin-left: 60px;
+}
+
+@media (max-width: 1000px) {
+    .navbar-txt-item {
+        display: none;
+        margin-right: 5px;
+    }
+    #navbar-slo-item {
+        display: block;
+    }
+    .sidenav {
+        padding-top: 15px;
+        background-image: none;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+    .sidenav-logo {
+        margin-left: 60px;
+    }
+}

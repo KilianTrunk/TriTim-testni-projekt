@@ -1,0 +1,102 @@
+<div class="o-nas">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1">
+                <img src="../assets/img/o-nas-img.png" alt="o-nas-img" class="o-nas-img" />
+            </div>
+            <div class="offset-1 col-lg-5 offset-lg-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="o-nas-main-txt o-nas-txt">O nas</div>
+                    </div>
+                </div>
+                <div class="o-nas-secondary-txt-container">
+                    <div class="row">
+                        <div class="col-10 col-lg-7">
+                            <div class="o-nas-secondary-txt o-nas-txt">
+                                Smo podjetje, kjer skupaj s sodelavci in zaupanja vrednimi partnerji zadnjih 30 let gradimo, razvijamo in ustvarjamo na področju mednarodnega transporta.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 col-lg-8">
+                            <div class="o-nas-secondary-txt o-nas-txt">
+                                Specializirani smo za prevoz volumenskega blaga z vozili z nosilnostjo od 7.500 kg do 24.000 kg in prostornine do 120 m3.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="o-nas-btn" onclick="window.location.href='about-us.html'">Več</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_o_nas = ".specializacija";
+    $target_section_txt_class_o_nas = ".o-nas-txt";
+    $target_section_img_class_o_nas = ".o-nas-img";
+
+    $(function() {
+        var prevScroll_o_nas = $(document).scrollTop();
+        $storage_o_nas = 0;
+        $storage_o_nas_img = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_o_nas = $($next_section_class_o_nas).offset().top;
+                var bottom_of_element_o_nas =
+                    $($next_section_class_o_nas).offset().top +
+                    $($next_section_class_o_nas).outerHeight();
+                var bottom_of_screen_o_nas = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_o_nas = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_o_nas > top_of_element_o_nas &&
+                    top_of_screen_o_nas < bottom_of_element_o_nas
+                ) {
+                    var newScroll_o_nas = $(document).scrollTop();
+                    if (newScroll_o_nas < prevScroll_o_nas) {
+                        // Scrolled up
+                        $storage_o_nas = $storage_o_nas - 20;
+                        $storage_o_nas_img = $storage_o_nas_img + 20;
+                        $($target_section_txt_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas + "px)",
+                        });
+                        $($target_section_img_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas_img + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_o_nas = $storage_o_nas + 20;
+                        $storage_o_nas_img = $storage_o_nas_img - 20;
+                        $($target_section_txt_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas + "px)",
+                        });
+                        $($target_section_img_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas_img + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_o_nas).css({
+                        transform: "translateY(0px)",
+                    });
+                    $($target_section_img_class_o_nas).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_o_nas = 0;
+                }
+                prevScroll_o_nas = newScroll_o_nas;
+            });
+        }
+    });
+</script>

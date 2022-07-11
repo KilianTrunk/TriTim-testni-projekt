@@ -1,0 +1,70 @@
+/* ---------- variables ---------- */
+
+$white: #FFFFFF;
+$black: #000000;
+
+/* ---------- classes ---------- */
+
+.o-nas {
+    height: 100vh;
+    padding: 150px 0 100px 0;
+}
+
+.o-nas-img {
+    height: 90%;
+    transition: 0.04s;
+}
+
+.o-nas-txt {
+    transition: 0.04s;
+}
+
+.o-nas-main-txt {
+    font-size: 72px;
+    padding-top: 36px;
+}
+
+.o-nas-secondary-txt {
+    font-size: 16px;
+    padding-bottom: 24px;
+}
+
+.o-nas-secondary-txt-container {
+    padding-top: 90px;
+}
+
+.o-nas-btn {
+    border-radius: 30px;
+    border: 1px solid $black;
+    padding: 10px 34px;
+    font-size: 18px;
+    background-color: transparent;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.o-nas-btn:hover {
+    color: $white;
+    border-color: $black;
+    background-color: $black;
+}
+
+@media only screen and (max-width: 1000px) {
+    .o-nas-img {
+        display: none;
+    }
+    .o-nas {
+        height: auto;
+        padding: 38px 0 60px 0;
+    }
+    .o-nas-main-txt {
+        font-size: 28px;
+    }
+    .o-nas-secondary-txt-container {
+        padding-top: 40px;
+    }
+    .o-nas-btn {
+        margin-top: 16px;
+        font-weight: normal;
+    }
+}

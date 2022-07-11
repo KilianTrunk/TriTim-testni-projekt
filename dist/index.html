@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <title>Domov</title>
+
+    <!-- Favicon -->
+    <link rel=" icon" type="image/ico" href="./assets/img/favicon/favicon.svg" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link href="./assets/css/main.min.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="./assets/js/bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="container-fluid p-0 navigacija">
+            <div class="row">
+                <div class="col-3 offset-1 col-lg-1 offset-lg-1">
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" />
+                            <img src="../assets/img/logo-black.png" alt="logo-img" id="navbar-logo-black" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10 offset-2 col-lg-9 offset-lg-0">
+                    <div class="row">
+                        <div class="col-12 col-lg-12">
+                            <div class="menu">
+                                <ul class="navbar-ul">
+                                    <li>
+                                        <a href="about-us.html" class="navbar-txt-item">O NAS</a>
+                                    </li>
+                                    <li><a href="#" class="navbar-txt-item">TRANSPORT</a></li>
+                                    <li>
+                                        <a href="#" class="navbar-txt-item">POSLOVNO SVETOVANJE</a>
+                                    </li>
+                                    <li><a href="#" class="navbar-txt-item">TRGOVINA</a></li>
+                                    <li>
+                                        <a href="#" class="navbar-txt-item" id="navbar-slo-item">SLO <i class="fa-solid fa-angle-down"></i
+                      ></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-regular fa-user"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa-solid fa-bars"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-9 offset-2 col-lg-12 offset-lg-0">
+                            <div class="navbar-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-1">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="index.html">
+                                    <img src="../assets/img/logo.png" alt="logo-img" id="navbar-logo-white" class="sidenav-logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">O NAS</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">TRANSPORT</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">POSLOVNO SVETOVANJE</a
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <a href="about-us.html" class="sidebar-txt">TRGOVINA</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a href="about-us.html" class="sidebar-txt">SOFINANCIRANJE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 offset-2">
+                        <a href="javascript:void(0)" class="closebtn"><i class="fa-solid fa-x"></i
+              ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Navbar Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $(".navigacija").addClass("black");
+                $("#navbar-logo-white").hide();
+                $("#navbar-logo-black").show();
+            } else {
+                $(".navigacija").removeClass("black");
+                $("#navbar-logo-white").show();
+                $("#navbar-logo-black").hide();
+            }
+        });
+
+        $(".fa-bars").click(function() {
+            $openNav();
+        });
+
+        $(".closebtn").click(function() {
+            $closeNav();
+        });
+
+        $openNav = function() {
+            $("#mySidenav").css({
+                width: "100%",
+            });
+        };
+
+        $closeNav = function() {
+            $("#mySidenav").css({
+                width: "0",
+            });
+        };
+    </script> <div class="izkusnje">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 offset-1 col-lg-5 offset-lg-1">
+                <div class="izkusnje-txt">
+                    Več kot 30 let izkušenj na področju transporta.
+                </div>
+            </div>
+        </div>
+        <img src="../assets/img/eu-img.png" alt="eu-img" class="izkusnje-eu-img" />
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_izkusnje = ".o-nas";
+    $target_section_txt_class_izkusnje = ".izkusnje-txt";
+
+    $(function() {
+        var prevScroll_izkusnje = $(document).scrollTop();
+        $storage_izkusnje = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_izkusnje = $($next_section_class_izkusnje).offset().top;
+                var bottom_of_element_izkusnje =
+                    $($next_section_class_izkusnje).offset().top +
+                    $($next_section_class_izkusnje).outerHeight();
+                var bottom_of_screen_izkusnje = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_izkusnje = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_izkusnje > top_of_element_izkusnje &&
+                    top_of_screen_izkusnje < bottom_of_element_izkusnje
+                ) {
+                    var newScroll_izkusnje = $(document).scrollTop();
+                    if (newScroll_izkusnje < prevScroll_izkusnje) {
+                        // Scrolled up
+                        $storage_izkusnje = $storage_izkusnje - 20;
+                        console.log($storage_izkusnje);
+                        $($target_section_txt_class_izkusnje).css({
+                            transform: "translateY(" + $storage_izkusnje + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_izkusnje = $storage_izkusnje + 20;
+                        console.log($storage_izkusnje);
+                        $($target_section_txt_class_izkusnje).css({
+                            transform: "translateY(" + $storage_izkusnje + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_izkusnje).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_izkusnje = 0;
+                }
+                prevScroll_izkusnje = newScroll_izkusnje;
+            });
+        }
+    });
+</script> <div class="o-nas">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-1">
+                <img src="../assets/img/o-nas-img.png" alt="o-nas-img" class="o-nas-img" />
+            </div>
+            <div class="offset-1 col-lg-5 offset-lg-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="o-nas-main-txt o-nas-txt">O nas</div>
+                    </div>
+                </div>
+                <div class="o-nas-secondary-txt-container">
+                    <div class="row">
+                        <div class="col-10 col-lg-7">
+                            <div class="o-nas-secondary-txt o-nas-txt">
+                                Smo podjetje, kjer skupaj s sodelavci in zaupanja vrednimi partnerji zadnjih 30 let gradimo, razvijamo in ustvarjamo na področju mednarodnega transporta.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 col-lg-8">
+                            <div class="o-nas-secondary-txt o-nas-txt">
+                                Specializirani smo za prevoz volumenskega blaga z vozili z nosilnostjo od 7.500 kg do 24.000 kg in prostornine do 120 m3.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="button" class="o-nas-btn" onclick="window.location.href='about-us.html'">Več</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_o_nas = ".specializacija";
+    $target_section_txt_class_o_nas = ".o-nas-txt";
+    $target_section_img_class_o_nas = ".o-nas-img";
+
+    $(function() {
+        var prevScroll_o_nas = $(document).scrollTop();
+        $storage_o_nas = 0;
+        $storage_o_nas_img = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_o_nas = $($next_section_class_o_nas).offset().top;
+                var bottom_of_element_o_nas =
+                    $($next_section_class_o_nas).offset().top +
+                    $($next_section_class_o_nas).outerHeight();
+                var bottom_of_screen_o_nas = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_o_nas = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_o_nas > top_of_element_o_nas &&
+                    top_of_screen_o_nas < bottom_of_element_o_nas
+                ) {
+                    var newScroll_o_nas = $(document).scrollTop();
+                    if (newScroll_o_nas < prevScroll_o_nas) {
+                        // Scrolled up
+                        $storage_o_nas = $storage_o_nas - 20;
+                        $storage_o_nas_img = $storage_o_nas_img + 20;
+                        $($target_section_txt_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas + "px)",
+                        });
+                        $($target_section_img_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas_img + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_o_nas = $storage_o_nas + 20;
+                        $storage_o_nas_img = $storage_o_nas_img - 20;
+                        $($target_section_txt_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas + "px)",
+                        });
+                        $($target_section_img_class_o_nas).css({
+                            transform: "translateY(" + $storage_o_nas_img + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_o_nas).css({
+                        transform: "translateY(0px)",
+                    });
+                    $($target_section_img_class_o_nas).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_o_nas = 0;
+                }
+                prevScroll_o_nas = newScroll_o_nas;
+            });
+        }
+    });
+</script> <div class="specializacija">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-10 offset-1 col-lg-5 specializacija-section">
+                <div class="specializacija-txt">
+                    Specializirani za prevoz volumenskega blaga.
+                </div>
+                <button type="button" class="specializacija-btn">Več</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_specializacija = ".tovornjaki";
+    $target_section_txt_class_specializacija = ".specializacija-txt";
+
+    $(function() {
+        var prevScroll_specializacija = $(document).scrollTop();
+        $storage_specializacija = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_specializacija = $($next_section_class_specializacija).offset().top;
+                var bottom_of_element_specializacija =
+                    $($next_section_class_specializacija).offset().top +
+                    $($next_section_class_specializacija).outerHeight();
+                var bottom_of_screen_specializacija = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_specializacija = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_specializacija > top_of_element_specializacija &&
+                    top_of_screen_specializacija < bottom_of_element_specializacija
+                ) {
+                    var newScroll_specializacija = $(document).scrollTop();
+                    if (newScroll_specializacija < prevScroll_specializacija) {
+                        // Scrolled up
+                        $storage_specializacija = $storage_specializacija - 20;
+                        console.log($storage_specializacija);
+                        $($target_section_txt_class_specializacija).css({
+                            transform: "translateY(" + $storage_specializacija + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_specializacija = $storage_specializacija + 20;
+                        console.log($storage_specializacija);
+                        $($target_section_txt_class_specializacija).css({
+                            transform: "translateY(" + $storage_specializacija + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_specializacija).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_specializacija = 0;
+                }
+                prevScroll_specializacija = newScroll_specializacija;
+            });
+        }
+    });
+</script> <div class="tovornjaki">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="offset-1 col-lg-4 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Prostornina</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-prostornina.png" alt="tovornjak-prostornina-img" class="tovornjaki-img" />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-0 col-lg-1">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-5 offset-1 col-lg-6 offset-lg-0 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">Širina (notranja)</div>
+                    </div>
+                    <div class="col-1 col-lg-2">
+                        <div class="tovornjaki-line tovornjaki-secondary-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-3 col-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">2,5 m</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-lg-1">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-5 offset-1 col-lg-6 offset-lg-0 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">Višina (notranja)</div>
+                    </div>
+                    <div class="col-1 col-lg-2">
+                        <div class="tovornjaki-line tovornjaki-secondary-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-3 col-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">3 m</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Nosilnost</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-nosilnost.png" alt="tovornjak-nosilnost-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Emisijska kategorija</div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-emi-kat.png" alt="tovornjak-emi-kat-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Jumbo nadgradnja</div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-jumbo-ena.png" alt="tovornjak-jumbo-ena-img" class="tovornjaki-img" />
+                </div>
+                <div class="tovornjaki-img-section tovornjaki-section">
+                    <img src="../assets/img/tovornjak-jumbo-dva.png" alt="tovornjak-jumbo-dva-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_tovornjaki = ".tovornjaki";
+    $target_section_txt_class_tovornjaki = ".tovornjaki-img";
+
+    $(function() {
+        var prevScroll_tovornjaki = $(document).scrollTop();
+        $storage_tovornjaki = -700;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_tovornjaki = $(
+                    $next_section_class_tovornjaki
+                ).offset().top;
+                var bottom_of_element_tovornjaki =
+                    $($next_section_class_tovornjaki).offset().top +
+                    $($next_section_class_tovornjaki).outerHeight();
+                var bottom_of_screen_tovornjaki =
+                    $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_tovornjaki = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_tovornjaki > top_of_element_tovornjaki &&
+                    top_of_screen_tovornjaki < bottom_of_element_tovornjaki
+                ) {
+                    var newScroll_tovornjaki = $(document).scrollTop();
+                    if (newScroll_tovornjaki < prevScroll_tovornjaki) {
+                        // Scrolled up
+                        // Empty
+                    } else {
+                        // Scrolled down
+                        if ($storage_tovornjaki < 0) {
+                            $storage_tovornjaki = $storage_tovornjaki + 100;
+                            console.log($storage_tovornjaki);
+                            $($target_section_txt_class_tovornjaki).css({
+                                transform: "translateX(" + $storage_tovornjaki + "px)",
+                            });
+                        }
+                    }
+                }
+
+                if ($storage_tovornjaki == 0) {
+                    $(".tovornjaki-appear-transition").css({
+                        opacity: 1,
+                        transition: "all 2s linear",
+                    })
+                }
+
+                prevScroll_tovornjaki = newScroll_tovornjaki;
+            });
+        }
+    });
+</script> <div class="zagotavljanje">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-9 offset-1 col-lg-5">
+                <div class="zagotavljanje-txt">
+                    Zagotavljamo varen, zanesljiv in hiter prevoz blaga.
+                </div>
+                <button type="button" class="zagotavljanje-btn">Več</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_zagotavljanje = ".partnerji";
+    $target_section_txt_class_zagotavljanje = ".zagotavljanje-txt";
+
+    $(function() {
+        var prevScroll_zagotavljanje = $(document).scrollTop();
+        $storage_zagotavljanje = 0;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_zagotavljanje = $($next_section_class_zagotavljanje).offset().top;
+                var bottom_of_element_zagotavljanje =
+                    $($next_section_class_zagotavljanje).offset().top +
+                    $($next_section_class_zagotavljanje).outerHeight();
+                var bottom_of_screen_zagotavljanje = $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_zagotavljanje = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_zagotavljanje > top_of_element_zagotavljanje &&
+                    top_of_screen_zagotavljanje < bottom_of_element_zagotavljanje
+                ) {
+                    var newScroll_zagotavljanje = $(document).scrollTop();
+                    if (newScroll_zagotavljanje < prevScroll_zagotavljanje) {
+                        // Scrolled up
+                        $storage_zagotavljanje = $storage_zagotavljanje - 20;
+                        console.log($storage_zagotavljanje);
+                        $($target_section_txt_class_zagotavljanje).css({
+                            transform: "translateY(" + $storage_zagotavljanje + "px)",
+                        });
+                    } else {
+                        // Scrolled down
+                        $storage_zagotavljanje = $storage_zagotavljanje + 20;
+                        console.log($storage_zagotavljanje);
+                        $($target_section_txt_class_zagotavljanje).css({
+                            transform: "translateY(" + $storage_zagotavljanje + "px)",
+                        });
+                    }
+                } else {
+                    $($target_section_txt_class_zagotavljanje).css({
+                        transform: "translateY(0px)",
+                    });
+                    $storage_zagotavljanje = 0;
+                }
+                prevScroll_zagotavljanje = newScroll_zagotavljanje;
+            });
+        }
+    });
+</script> <div class="partnerji">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-6 offset-3 col-lg-6 offset-lg-3">
+                <div class="partnerji-txt">Naši zvesti partnerji</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="row">
+                    <div class="col-lg-3 partnerji-col partnerji-col-ena">
+                        <img src="../assets/img/partnerji-col-ena.png" alt="partnerji-img" class="partnerji-img" />
+                    </div>
+                    <div class="col-lg-3 partnerji-col partnerji-col-dva">
+                        <img src="../assets/img/partnerji-col-dva.png" alt="partnerji-img" class="partnerji-img" />
+                    </div>
+                    <div class="col-lg-3 partnerji-col partnerji-col-tri">
+                        <img src="../assets/img/partnerji-col-tri.png" alt="partnerji-img" class="partnerji-img" />
+                    </div>
+                    <div class="col-lg-3 partnerji-col partnerji-col-stiri">
+                        <img src="../assets/img/partnerji-col-stiri.png" alt="partnerji-img" class="partnerji-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="partnerji-slider">
+                    <img src="../assets/img/slider-buttons.png" alt="slider-btns" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="mednarodni-transport">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-6 col-lg-3 offset-lg-1">
+                    <div class="mednarodni-transport-main-txt mednarodni-transport-txt">Mednarodni transport.</div>
+                </div>
+                <div class="col-6 col-lg-3 offset-lg-4">
+                    <div class="mednarodni-transport-secondary-txt-container">
+                        <ul>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Avstrija</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Poljska</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Češka</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Slovaška</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Madžarska</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Hrvaška</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Srbija</li>
+                            <li class="mednarodni-transport-secondary-txt mednarodni-transport-txt">Nemčija</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ---------- Text Scrolling Effect  ---------- */
+
+        // Kako uporabit za vsak section posebej :
+        // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+        $next_section_class_mednarodni_transport = ".kontaktni-obrazec";
+        $target_section_txt_class_mednarodni_transport = ".mednarodni-transport-txt";
+
+        $(function() {
+            var prevScroll_mednarodni_transport = $(document).scrollTop();
+            $storage_mednarodni_transport = 0;
+
+            if ($(document).width() > 1000) {
+                $(window).scroll(function() {
+                    var top_of_element_mednarodni_transport = $($next_section_class_mednarodni_transport).offset().top;
+                    var bottom_of_element_mednarodni_transport =
+                        $($next_section_class_mednarodni_transport).offset().top +
+                        $($next_section_class_mednarodni_transport).outerHeight();
+                    var bottom_of_screen_mednarodni_transport = $(window).scrollTop() + $(window).innerHeight();
+                    var top_of_screen_mednarodni_transport = $(window).scrollTop();
+
+                    if (
+                        bottom_of_screen_mednarodni_transport > top_of_element_mednarodni_transport &&
+                        top_of_screen_mednarodni_transport < bottom_of_element_mednarodni_transport
+                    ) {
+                        var newScroll_mednarodni_transport = $(document).scrollTop();
+                        if (newScroll_mednarodni_transport < prevScroll_mednarodni_transport) {
+                            // Scrolled up
+                            $storage_mednarodni_transport = $storage_mednarodni_transport - 20;
+                            console.log($storage_mednarodni_transport);
+                            $($target_section_txt_class_mednarodni_transport).css({
+                                transform: "translateY(" + $storage_mednarodni_transport + "px)",
+                            });
+                        } else {
+                            // Scrolled down
+                            $storage_mednarodni_transport = $storage_mednarodni_transport + 20;
+                            console.log($storage_mednarodni_transport);
+                            $($target_section_txt_class_mednarodni_transport).css({
+                                transform: "translateY(" + $storage_mednarodni_transport + "px)",
+                            });
+                        }
+                    } else {
+                        $($target_section_txt_class_mednarodni_transport).css({
+                            transform: "translateY(0px)",
+                        });
+                        $storage_mednarodni_transport = 0;
+                    }
+                    prevScroll_mednarodni_transport = newScroll_mednarodni_transport;
+                });
+            }
+        });
+    </script> <div class="kontaktni-obrazec">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-11 offset-1">
+                <div class="kontaktni-obrazec-main-txt">Kontaktni obrazec</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-1">
+                <div class="kontaktni-obrazec-secondary-txt">
+                    Če izpolnite obrazec za povpraševanje, vam bomo odgovorili v najkrajšem možnem času.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <form action="javascript:void(0);" method="post">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="ime" name="ime" placeholder="Ime" class="kontaktni-obrazec-input" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="priimek" name="priimek" placeholder="Priimek" class="kontaktni-obrazec-input" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="email" name="email" placeholder="E-mail" class="kontaktni-obrazec-input" />
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <input type="text" id="telst" name="telst" placeholder="Telefonska št." class="kontaktni-obrazec-input" />
+                        </div>
+                    </div>
+                    <textarea id="sporocilo" name="sporocilo" placeholder="Vaše sporočilo" class="kontaktni-obrazec-input kontaktni-obrazec-textarea"></textarea>
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-start">
+                            <input type="checkbox" class="css-checkbox kontaktni-obrazec-checkbox" id="pogoj" name="pogoj" checked="checked" />
+                            <label for="pogoj" class="kontaktni-obrazec-pogoj-txt css-label lite-x-gray">S prijavo se strinjate s pogoji poslovanja in politiko
+                zasebnosti.</label
+              >
+            </div>
+          </div>
+          <input type="submit" value="Pošljite" class="kontaktni-obrazec-btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div> <footer class="footer">
+    <div class="container-fluid p-0">
+        <div class="row footer-main">
+            <div class="col-3 offset-1 col-lg-4 offset-lg-1">
+                <img src="../assets/img/logo.png" alt="logo-img" class="footer-logo" />
+            </div>
+            <div class="col-6 col-lg-3 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg">TLS, d.o.o.</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">Sp. Rečica 6</div>
+                </div>
+                <div class="row">
+                    <div class="col-lg">3270 Laško</div>
+                </div>
+            </div>
+            <div class="col-7 offset-4 col-lg-3 offset-lg-0">
+                <div class="row footer-txt-padding-top">
+                    <div class="col-3">Telefon:</div>
+                    <div class="col-8">+386 3 734 33 26</div>
+                </div>
+                <div class="row">
+                    <div class="col-3">Mobitel:</div>
+                    <div class="col-8">+386 31 304 000</div>
+                </div>
+                <div class="row footer-txt-padding-top footer-email-txt">
+                    <div class="col-3">Email:</div>
+                    <div class="col-8">transport@tls-lasko.si</div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-secondary">
+            <div class="col-7 offset-4 col-lg-4 offset-lg-1 footer-txt-padding-top">
+                Dizajn in izvedba Medias Kreativ, programiranje TriTim
+            </div>
+            <div class="col-8 offset-4 col-lg-3 offset-lg-0 footer-txt-padding-top">Sofinanciranje</div>
+            <div class="col-8 offset-4 col-lg-3 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-4 footer-txt-padding-top"><a class="footer-pogoji-poslovanja" href="../pogoji-poslovanja.doc" download>Pogoji poslovanja</a></div>
+                    <div class="col-lg-8 footer-txt-padding-top">Piškotki</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

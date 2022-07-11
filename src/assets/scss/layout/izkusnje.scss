@@ -1,0 +1,41 @@
+/* ---------- variables ---------- */
+
+$white: #ffffff;
+
+/* ---------- classes ---------- */
+
+.izkusnje {
+    background-image: url("../../../assets/img/izkusnje-img.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 100%;
+    height: 100vh;
+    padding-top: 400px;
+}
+
+.izkusnje-txt {
+    font-size: 72px;
+    color: $white;
+    line-height: 70px;
+    transition: 0.04s;
+}
+
+.izkusnje-eu-img {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .izkusnje-eu-img {
+        display: none;
+    }
+    .izkusnje-txt {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .izkusnje {
+        background-position: 60% 170%;
+        padding-top: 360px;
+    }
+}

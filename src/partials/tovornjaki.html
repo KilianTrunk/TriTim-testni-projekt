@@ -1,0 +1,163 @@
+<div class="tovornjaki">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="offset-1 col-lg-4 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Prostornina</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-prostornina.png" alt="tovornjak-prostornina-img" class="tovornjaki-img" />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-0 col-lg-1">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-5 offset-1 col-lg-6 offset-lg-0 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">Širina (notranja)</div>
+                    </div>
+                    <div class="col-1 col-lg-2">
+                        <div class="tovornjaki-line tovornjaki-secondary-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-3 col-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">2,5 m</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-lg-1">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-5 offset-1 col-lg-6 offset-lg-0 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">Višina (notranja)</div>
+                    </div>
+                    <div class="col-1 col-lg-2">
+                        <div class="tovornjaki-line tovornjaki-secondary-line tovornjaki-appear-transition"></div>
+                    </div>
+                    <div class="col-3 col-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-secondary-txt tovornjaki-appear-transition">3 m</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Nosilnost</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-nosilnost.png" alt="tovornjak-nosilnost-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Emisijska kategorija</div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-emi-kat.png" alt="tovornjak-emi-kat-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+        <div class="row tovornjaki-section">
+            <div class="offset-1 col-lg-4 offset-lg-0">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-2 tovornjaki-row">
+                        <div class="tovornjaki-main-txt tovornjaki-appear-transition">Jumbo nadgradnja</div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="tovornjaki-line tovornjaki-appear-transition"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tovornjaki-img-section">
+                    <img src="../assets/img/tovornjak-jumbo-ena.png" alt="tovornjak-jumbo-ena-img" class="tovornjaki-img" />
+                </div>
+                <div class="tovornjaki-img-section tovornjaki-section">
+                    <img src="../assets/img/tovornjak-jumbo-dva.png" alt="tovornjak-jumbo-dva-img" class="tovornjaki-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* ---------- Text Scrolling Effect  ---------- */
+
+    // Kako uporabit za vsak section posebej :
+    // - spremeni končnice vseh spremenljivk glede na ime section-a
+
+    $next_section_class_tovornjaki = ".tovornjaki";
+    $target_section_txt_class_tovornjaki = ".tovornjaki-img";
+
+    $(function() {
+        var prevScroll_tovornjaki = $(document).scrollTop();
+        $storage_tovornjaki = -700;
+
+        if ($(document).width() > 1000) {
+            $(window).scroll(function() {
+                var top_of_element_tovornjaki = $(
+                    $next_section_class_tovornjaki
+                ).offset().top;
+                var bottom_of_element_tovornjaki =
+                    $($next_section_class_tovornjaki).offset().top +
+                    $($next_section_class_tovornjaki).outerHeight();
+                var bottom_of_screen_tovornjaki =
+                    $(window).scrollTop() + $(window).innerHeight();
+                var top_of_screen_tovornjaki = $(window).scrollTop();
+
+                if (
+                    bottom_of_screen_tovornjaki > top_of_element_tovornjaki &&
+                    top_of_screen_tovornjaki < bottom_of_element_tovornjaki
+                ) {
+                    var newScroll_tovornjaki = $(document).scrollTop();
+                    if (newScroll_tovornjaki < prevScroll_tovornjaki) {
+                        // Scrolled up
+                        // Empty
+                    } else {
+                        // Scrolled down
+                        if ($storage_tovornjaki < 0) {
+                            $storage_tovornjaki = $storage_tovornjaki + 100;
+                            console.log($storage_tovornjaki);
+                            $($target_section_txt_class_tovornjaki).css({
+                                transform: "translateX(" + $storage_tovornjaki + "px)",
+                            });
+                        }
+                    }
+                }
+
+                if ($storage_tovornjaki == 0) {
+                    $(".tovornjaki-appear-transition").css({
+                        opacity: 1,
+                        transition: "all 2s linear",
+                    })
+                }
+
+                prevScroll_tovornjaki = newScroll_tovornjaki;
+            });
+        }
+    });
+</script>
